@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: PRODUCT-SERVICE
+  datasource:
+    url: jdbc:h2:mem:testdb
+  jpa:
+    show-sql: true
+  h2:
+    console: 
+      enabled: true
+
+
+server:
+  port: 8085
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://15.206.206.166:8761/eureka
+  instance:
+    hostname: localhost
