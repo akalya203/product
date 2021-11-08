@@ -26,7 +26,7 @@ public class ProductServiceImpl implements  IProductService{
         payment.setPaidAmount(finalPrice);
         payment.setProductId(savedProduct.getPid());
         payment.setQuantity(product.getQuantity());
-        String url="http://PAYMENT-SERVICE/payment/makePayment";
+        String url="http://3.110.82.154/payment/makePayment";
         Payment savedPayment=restTemplate.postForObject(url,payment,Payment.class);
         System.out.println(savedPayment);
         return savedProduct;
